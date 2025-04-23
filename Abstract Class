@@ -1,0 +1,44 @@
+abstract class Vehicle {
+    abstract void start();
+    abstract void stop();
+
+    void fuelType() {
+        System.out.println("Most vehicles use petrol or diesel.");
+    }
+}
+
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car started with key ignition.");
+    }
+
+    void stop() {
+        System.out.println("Car stopped using brakes.");
+    }
+}
+
+class Bike extends Vehicle {
+    void start() {
+        System.out.println("Bike started with self-start.");
+    }
+
+    void stop() {
+        System.out.println("Bike stopped using disc brakes.");
+    }
+}
+
+public class Hello {
+    public static void main(String[] args) {
+        Vehicle v1 = new Car();
+        v1.start();
+        v1.stop();
+        v1.fuelType();
+
+        System.out.println();
+
+        Vehicle v2 = new Bike();
+        v2.start();
+        v2.stop();
+        v2.fuelType();
+    }
+}
